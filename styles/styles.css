@@ -97,12 +97,28 @@
     height: 9vh;
     width: 100vw;
     position: fixed;
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: 1;
+    }
+    
+    @keyframes slidein {
+    from {
+    margin-left: 100%;
+    width: 300%;
+    }
+    
+    to {
+    margin-left: 0%;
+    width: 100%;
+    }   
 }
 .header_logo {
     height: 5vh;
     display: inline-block;    
     width: 45vw;
 }
+
 .header_logo_link{
   color: var(--texto-blanco);
   text-decoration: none;
