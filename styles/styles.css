@@ -1,12 +1,5 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');*/
-
-:root {
-    /*defino la variable*/
-   --rojo: #9f3647; 
-   --texto-blanco: #ffffff;
-    /*2em => 2 * 16px = 32px;*/
-
-}
+@import url(./variables.css);
 
 /*selector universal*/
 * {
@@ -98,13 +91,24 @@
 }
 
 .header {
-    background-color:aquamarine ;
+    background-color:var(--rojo);
+    padding-top: 1vh;
+    padding-left: 3vw;
+    height: 9vh;
+    width: 100vw;
+    position: fixed;
 }
 .header_logo {
     height: 5vh;
     display: inline-block;    
     width: 45vw;
-} 
+}
+.header_logo_link{
+  color: var(--texto-blanco);
+  text-decoration: none;
+
+}
+
 .header_menu {
     height: 10vh;
     display: inline-block;
@@ -115,4 +119,65 @@
     padding-left: 1vw;
     padding-right: 1vw;
     text-decoration: none;
+    color: var(--texto-blanco);
 }
+
+#header_menu_login{
+  padding: 1vh;
+  background: black;
+  border-radius: 5px;
+  font-size: 1rem ;
+}
+
+/*  formulario de busqueda */
+.busqueda{
+  text-align: center;
+  height: 50vh;
+  background-color: var(--fondo-negro);
+  color: var(--texto-blanco);
+  padding-top: 10vh;
+  font-size: 1.5rem;
+  }
+
+  .busqueda form{
+    padding-top: 6vh;
+  }
+
+ .imput-search{
+  padding: 1.5vh 3vh;
+  text-transform: capitalize;
+  border-radius: 15px;
+  width: 50vw;
+  border: none;
+  outline: none;
+ }
+
+ .buscar{
+  background: var(--rojo);
+  padding: 1.5vh 3vh;
+  color: var(--texto-blanco);
+  border-radius: 25px;
+  border: 1px solid var(--texto-blanco);
+  font-weight: bold;
+ }
+
+ .buscar:hover {
+  font-size: 1.1rem;
+ }
+ hr{
+  margin: 0 auto;
+  margin-top: 20vh;
+  width: 70vw;
+  border: 0.5px solid var(--rojo);
+ }
+
+ #icon-up{
+  position: fixed;
+  color: var(--texto-blanco);
+  top: 90vh;
+  left: 90vw;
+
+  
+ }
+
+ 
