@@ -56,18 +56,13 @@
   font-style: italic;
 }
 
-/*especifidad
-    inline > id > clase > tipo
-    !important 
-*/
 .texto-blanco {
     color: var(--texto-blanco);
 }
 .main {
     background-image: linear-gradient(to right top, #0000008a, #0000008a), url(../imgs/banner-bg.jpg);
-    /*background-attachment: fixed; *//* tph*/
-    height: 90vh; /*vh altura relativa*/
-    width: 100vw; /*vw ancho relativo*/
+    height: 90vh;
+    width: 100vw;
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -77,20 +72,21 @@
 .main_titulo {
     padding-top: 20vh;
     padding-bottom: 5vh;
-    font-size: 3rem; /*rem|em unidad de medida relativa ¿a qué?*/
+    font-size: 3rem;
 }
 .main_subtitulo {
     margin-bottom: 5vh;
 }
 .main_btn_registrarse {
     text-decoration: none;
-    padding: 15px; /*espacio desde el borde hacia dentro*/
+    padding: 15px; 
     background-color: var(--rojo);
     color: var(--texto-blanco);
     border-radius: 5px;    
 }
 
 .header {
+    display: flex;
     background-color:var(--rojo);
     padding-top: 1vh;
     padding-left: 3vw;
@@ -117,13 +113,17 @@
     height: 5vh;
     display: inline-block;    
     width: 45vw;
+  }
+
+.header_logo:hover{
+  font-size: large;
+  opacity: 50%;  
 }
 
 .header_logo_link{
   color: var(--texto-blanco);
   text-decoration: none;
-
-}
+  }
 
 .header_menu {
     height: 10vh;
@@ -163,7 +163,7 @@
   padding: 1.5vh 3vh;
   text-transform: capitalize;
   border-radius: 15px;
-  width: 50vw;
+  width: 40vw;
   border: none;
   outline: none;
  }
@@ -204,17 +204,60 @@
  }
 
  #trending-container{
-  display: flex;
+  display: grid;
+  grid-template-rows: 2fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 60px;
+  /*flex-wrap: wrap;*/
+  gap: 10px;
   background: var(--fondo-negro);
  }
 
  .img-trending{
-  width: 40%;
+  width: 100%;
   object-fit: cover;
   border-radius: 10px;
  }
+
+ .img-trending:hover{
+  width: 200%;
+  transition: all 1s ease;
+  z-index: 2;
+ }
+
+ .option-title{
+  background: var(--fondo-negro);
+  padding-top: 6vh;
+  padding-bottom: 1vh;
+  padding-left: 40%;  
+}
+
+.button-elect{
+  background-color: var(--rojo);
+  border-radius: 5px;
+  height: 7vh;
+  width: 9vw;
+  border-color: var(--texto-blanco);
+  color: var(--texto-blanco);
+  outline: none;
+  box-sizing: content-box;    
+ }
+
+ .line {
+  padding: 2px;
+  background: var(--fondo-negro);
+}
+
+.best-movies{
+  background: var(--fondo-negro);
+  color: var(--texto-blanco);
+  text-align: center;
+  padding-top: 9vh;
+  padding-bottom: 9vh;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+
 
  
