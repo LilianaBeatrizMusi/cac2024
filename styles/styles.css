@@ -240,7 +240,15 @@
   border-color: var(--texto-blanco);
   color: var(--texto-blanco);
   outline: none;
-  box-sizing: content-box;    
+  box-sizing: content-box;   
+ }
+
+ .button-elect:hover{
+  transition: all 1s ease;
+  width: 20%;
+  background-color: var(--fondo-negro)
+  
+
  }
 
  .line {
